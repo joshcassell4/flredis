@@ -3,14 +3,14 @@ from flask import Blueprint
 #from storenames import storenames
 from bprints import stores
 
-blueprint1 = Blueprint('blueprint1', __name__)
-portnum = 6379
+blueprint = Blueprint('blueprint', __name__)
+#portnum = 6379
 #storesn = ['redis']
 # stores = []
 # for store in storenames:
 #     stores.append(Redis(host=store, port=portnum))
 
-@blueprint1.route('/')
+@blueprint.route('/')
 def index():
     
     stores[0].incr('hits')
